@@ -19,7 +19,7 @@ jobs: # A basic unit of work in a run
       - run:
           name: install dependencies
           command: |
-            python3 -m venv venv
+            python3 -m env venv
             . env/bin/activate
             make install
 
@@ -31,13 +31,13 @@ jobs: # A basic unit of work in a run
       - run:
           name: run lint
           command: |
-            python3 -m venv venv
+            python3 -m env venv
             . env/bin/activate
             make lint
 
       - run:
           name: run tests
           command: |
-            python3 -m venv venv
+            python3 -m env venv
             . env/bin/activate
             make test
